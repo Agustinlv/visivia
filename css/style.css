@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+header{
+    position: sticky;
+    top: 0px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 100vw;
+    height: 80px;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar-link{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: black;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.top-anchor{
+}
+
+.equipo-contenido{
+    display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 2;
+    grid-template-areas: "equipo-titulo equipo-titulo equipo-titulo equipo-titulo" "equipo-1 equipo-2 equipo-3 equipo-4";
+}
+
+.equipo-titulo{
+    grid-area: equipo-titulo;
+}
+
+.equipo-1{
+    grid-area: equipo-1;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/equipo-1.jpg");
+    background-size: contain;
+}
+
+.equipo-2{
+    grid-area: equipo-2;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/equipo-2.jpg");
+    background-size: contain;
+}
+
+.equipo-3{
+    grid-area: equipo-3;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/equipo-3.jpg");
+    background-size: contain;
+}
+
+.equipo-4{
+    grid-area: equipo-4;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/equipo-4.jpg");
+    background-size: contain;
+}
+
+.redes-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.instagram{
+    height: 80px;
+    width: 70px;
+    background-image: url("../img/instagram.svg");
+    background-size: cover;
+}
+
+.linkedin{
+    height: 80px;
+    width: 70px;
+    background-image: url("../img/linkedin-in.svg");
+    background-size: cover;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    bottom: 10px;
+}
+
+.back-to-top{
+    display: flex;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 576px){
+
+}
+
+@media screen and (min-width: 1000px){
+    
+}
