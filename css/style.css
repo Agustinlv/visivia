@@ -3,6 +3,7 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
 }
 
 body{
@@ -27,6 +28,7 @@ header{
     align-items: center;
     height: 80px;
     width: 1000px;
+    transition: 500ms;
 }
 
 .navbar ul{
@@ -35,6 +37,12 @@ header{
     align-items: center;
     list-style: none;
     gap: 20px;
+}
+
+.navbar ul li:hover{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px 0px;
 }
 
 .navbar-link{
@@ -50,78 +58,230 @@ main{
     align-items: center;
 }
 
-.bienvenidos-container{
+.container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 400px;
+    background-color:rgb(200, 200, 200);
     width: 100vw;
     text-transform: uppercase;
 }
 
-.quienes-container{
+#container-1{
+    height: 400px;
+}
+
+#container-2{
+    background-color:rgb(225, 225, 225);
+}
+
+#container-4{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4)),url("../img/valores-bkg.png");
+    background-size: cover;
+}
+
+#container-5{
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),url("../img/equipo-bkg.jpg");
+    background-size: cover;
+}
+
+#container-6{
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4)),url("../img/alianzas-bkg.png");
+    background-size: cover;
+}
+
+#container-8{
+    background-color:rgb(225, 225, 225);
+}
+
+.contenido{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-}
-
-.quienes-contenido{
-    display: grid;
     width: 1000px;
+    padding: 80px;
+    gap: 50px;
 }
 
-.mission-container{
+.contenido form{
     display: flex;
     flex-direction: column;
+    gap: 30px;
+}
+
+.contenido form input{
+    width: 400px;
+}
+
+.contenido button{
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.contenido-row{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 1000px;
-    height: fit-content;
-    padding: 20px;
+    padding: 80px;
+    gap: 50px;
 }
 
-.equipo-contenido{
+.contenido-grid{
     display: grid;
-    grid-template-columns: 4;
-    grid-template-rows: 2;
-    grid-template-areas: "equipo-titulo equipo-titulo equipo-titulo equipo-titulo" "equipo-1 equipo-2 equipo-3 equipo-4";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3";
+    justify-content: space-between;
+    align-items: start;
+    width: 1000px;
+    padding: 80px;
+    gap: 50px;
 }
 
-.equipo-titulo{
-    grid-area: equipo-titulo;
+
+#alianzas{
+    grid-template-areas: "seccion-titulo seccion-titulo" "item-1 item-2";
 }
 
-.equipo-1{
-    grid-area: equipo-1;
+#contacto{
+    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3" "item-4 item-4 item-4";
+}
+
+.item-descripcion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.item-descripcion h3{
+    font-size: 1rem;
+}
+
+.item-descripcion p{
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.item-descripcion button{
+    padding: 5px 10px;
+}
+
+#seccion-titulo{
+    grid-area: seccion-titulo;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(30, 30, 30);
+}
+
+#seccion-titulo-blanco{
+    grid-area: seccion-titulo;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(225, 225, 255);
+    color: white;
+}
+
+#item-1{
+    grid-area: item-1;
+}
+
+#item-2{
+    grid-area: item-2;
+}
+
+#item-3{
+    grid-area: item-3;
+}
+
+#item-4{
+    grid-area: item-4;
+}
+
+#equipo{
+    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3 item-4";
+}
+
+.equipo{
     width: 200px;
     height: 200px;
+    background-size: contain;
+}
+
+.equipo div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    gap: 10px;
+    color: transparent;
+    padding: 5px;
+}
+
+.equipo div:hover{
+    display: flex;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.equipo p{
+    font-size: 0.75rem;
+    text-align: center;
+    text-transform: none;
+}
+
+#equipo-1{
+    grid-area: item-1;
     background-image: url("../img/equipo-1.jpg");
-    background-size: contain;
 }
 
-.equipo-2{
-    grid-area: equipo-2;
-    width: 200px;
-    height: 200px;
+#equipo-2{
+    grid-area: item-2;
     background-image: url("../img/equipo-2.jpg");
-    background-size: contain;
 }
 
-.equipo-3{
-    grid-area: equipo-3;
-    width: 200px;
-    height: 200px;
+#equipo-3{
+    grid-area: item-3;
     background-image: url("../img/equipo-3.jpg");
-    background-size: contain;
 }
 
-.equipo-4{
-    grid-area: equipo-4;
-    width: 200px;
-    height: 200px;
+#equipo-4{
+    grid-area: item-4;
     background-image: url("../img/equipo-4.jpg");
-    background-size: contain;
+}
+
+.contacto-boton{
+    height: 70px;
+    width: 70px;
+    background-color: transparent;
+    background-size: cover;
+    border-width: 0px;
+}
+
+#boton-1{
+    background-image: url("../img/envelope.svg");
+}
+
+#boton-2{
+    background-image: url("../img/comment.svg");
+}
+
+#boton-3{
+    width: 80px;
+    background-image: url("../img/map.svg");
+}
+
+.mapa{
+    display: flex;
+    justify-content: center;
 }
 
 .redes-container{
@@ -143,18 +303,16 @@ main{
     background-size: cover;
 }
 
-footer{
-    display: flex;
+.volver{
+    display: inline-block;
     justify-content: center;
-    position: sticky;
-    bottom: 10px;
-}
-
-.back-to-top{
-    display: flex;
-    color: black;
-    text-decoration: none;
+    background-color: transparent;
     text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.75rem;
+    width: 100px;
+    position: sticky;
+    bottom: 0px;
 }
 
 @media screen and (min-width: 576px){
