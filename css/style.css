@@ -6,6 +6,10 @@
     user-select: none;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -20,6 +24,7 @@ header{
     top: 0px;
     background-color: rgba(255, 255, 255, 0.9);
     width: 100vw;
+    box-shadow: 0px 3px 50px rgba(0, 0, 0, 0.5);
 }
 
 .navbar{
@@ -27,22 +32,28 @@ header{
     justify-content: center;
     align-items: center;
     height: 80px;
-    width: 1000px;
     transition: 500ms;
 }
 
 .navbar ul{
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    gap: 20px;
+    width: 80vw;
+    gap: 10px;
 }
 
-.navbar ul li:hover{
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 5px 0px;
+.navbar ul li a{
+    color: rgb(128, 128, 128);
+    font-weight: 700;
+}
+
+.navbar ul li a:hover{
+    color: rgb(2, 70, 135);
+    border-bottom: 4px solid rgb(2, 70, 135);
+    padding: 10px 0px;
 }
 
 .navbar-link{
@@ -56,6 +67,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: -1;
 }
 
 .container{
@@ -63,36 +75,28 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color:rgb(200, 200, 200);
     width: 100vw;
-    text-transform: uppercase;
+    scroll-snap-align: start;
+    height: 1000px;
+}
+
+h1{
+    font-size: 4.5rem;
 }
 
 #container-1{
-    height: 400px;
+    background-image: radial-gradient(ellipse farthest-corner at 0% 0%, rgba(102, 227, 255,0.8) 25%,rgba(3, 71, 135,0.9)),url("../img/fondo_animado_1.gif");
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
 
 #container-2{
-    background-color:rgb(225, 225, 225);
+    background-image: radial-gradient(ellipse farthest-corner at 0% 50%, rgba(188, 241, 252, 0.35),rgba(85, 165, 240, 0.25));
 }
 
-#container-4{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4)),url("../img/valores-bkg.png");
-    background-size: cover;
-}
-
-#container-5{
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)),url("../img/equipo-bkg.jpg");
-    background-size: cover;
-}
-
-#container-6{
-    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.4)),url("../img/alianzas-bkg.png");
-    background-size: cover;
-}
-
-#container-8{
-    background-color:rgb(225, 225, 225);
+#container-3{
+    color:rgb(3, 71, 135);
 }
 
 .contenido{
@@ -101,8 +105,7 @@ main{
     justify-content: center;
     align-items: center;
     width: 1000px;
-    padding: 80px;
-    gap: 50px;
+    padding: 150px;
 }
 
 .contenido form{
@@ -120,12 +123,54 @@ main{
     text-transform: uppercase;
 }
 
+#contenido-1{
+    gap: 80px;
+    opacity: 80%;
+}
+
+#contenido-1 ul{
+    list-style: none;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 5rem;
+    width: 850px;
+}
+
+#contenido-1 button{
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 600;
+    background-color: rgb(3, 71, 135);
+    border: 1px solid whitesmoke;
+    border-radius: 3px;
+    padding: 15px 30px;
+}
+
+#contenido-2{
+    opacity: 80%;
+    gap: 80px;
+}
+
+#contenido-2 p{
+    padding: 40px 60px;
+    border: 1px solid rgb(3,71,135);
+    color:rgb(3, 71, 135);
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    width: 1000px;
+    text-align: justify;
+    line-height: 2.25rem;
+    text-shadow: 1px 1px 5px rgba(2, 70, 135,0.25);
+}
+
 .contenido-row{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 1000px;
-    padding: 80px;
+    padding: 150px;
     gap: 50px;
 }
 
@@ -133,16 +178,36 @@ main{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3";
-    justify-content: space-between;
-    align-items: start;
+    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3" "item-4 item-5 item-6";
+    justify-content: center;
+    align-items: flex-start;
     width: 1000px;
-    padding: 80px;
+    padding: 150px;
     gap: 50px;
 }
 
+#contenido-3{
+    grid-template-areas: "seccion-titulo seccion-titulo" "mision mision" "item-1 item-2" "item-3 item-4" "item-5 item-5";
+    opacity: 80%;
+    height: 1200px;
+}
 
-#alianzas{
+#mision{
+    grid-area: mision;
+    padding: 40px 60px;
+    border: 1px solid rgb(3,71,135);
+    color:rgb(3, 71, 135);
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-style: italic;
+    width: 1000px;
+    text-align: justify;
+    line-height: 2.25rem;
+    text-shadow: 1px 1px 5px rgba(2, 70, 135,0.25);
+}
+
+#clientes{
     grid-template-areas: "seccion-titulo seccion-titulo" "item-1 item-2";
 }
 
@@ -159,11 +224,13 @@ main{
 }
 
 .item-descripcion h3{
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .item-descripcion p{
-    font-size: 0.85rem;
+    display: flex;
+    font-size: 1rem;
+    font-style: italic;
     text-align: center;
 }
 
@@ -175,9 +242,12 @@ main{
     grid-area: seccion-titulo;
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(30, 30, 30);
+    color: rgba(3, 71, 135,0.9);
+    padding-bottom: 40px;
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 50, 90, 0.5);
 }
+
 
 #seccion-titulo-blanco{
     grid-area: seccion-titulo;
@@ -204,17 +274,25 @@ main{
     grid-area: item-4;
 }
 
+#item-5{
+    grid-area: item-5;
+}
+
+#item-6{
+    grid-area: item-6;
+}
+
 #equipo{
     grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo seccion-titulo" "item-1 item-2 item-3 item-4";
 }
 
-.equipo{
+.equipo-miembro{
     width: 200px;
     height: 200px;
     background-size: contain;
 }
 
-.equipo div{
+.equipo-miembro div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -226,13 +304,13 @@ main{
     padding: 5px;
 }
 
-.equipo div:hover{
+.equipo-miembro div:hover{
     display: flex;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.equipo p{
+.equipo-miembro p{
     font-size: 0.75rem;
     text-align: center;
     text-transform: none;
