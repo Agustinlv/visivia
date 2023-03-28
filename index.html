@@ -4,200 +4,238 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <title>Visivia</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
+            <a href="#section-1"><img id="nav-logo" src="./img/visivia.png" alt="visivia logo"></a>
             <ul>
-                <a href="#container-1"><img src="./img/visivia.png" alt="visivia logo"></a>
-                <li><a class="navbar-link"href="#container-2">quiénes somos</a></li>
-                <li><a class="navbar-link" href="#container-3">qué hacemos</a></li>
-                <li><a class="navbar-link" href="#container-4">identidad</a></li>
-                <li><a class="navbar-link" href="#container-5">equipo</a></li>
-                <li><a class="navbar-link" href="#container-6">clientes</a></li>
-                <li><a class="navbar-link" href="#container-7">contacto</a></li>
+                <li><a href="#section-2">quiénes somos</a></li>
+                <li><a href="#section-3">qué hacemos</a></li>
+                <li><a href="#section-4">identidad</a></li>
+                <li><a href="#section-5">hay equipo</a></li>
+                <li><a href="#section-6">alianzas estratégicas</a></li>
+                <li><a href="#section-7">contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <div class="container" id="container-1">
-            <div class="contenido" id="contenido-1">
-                <ul>
-                    <li>ASUNTOS PUBLICOS</li>
-                    <li>GESTIÓN DE CRISIS</li>
-                    <li>RADICACIÓN DE EMPRESAS</li>
-                </ul>
-                <button>BROCHURE</button>
-            </div>
-        </div>
-        <div class="container" id="container-2">
-            <div class="contenido" id="contenido-2">
-                <h2 id="seccion-titulo">Quiénes Somos</h2>
-                <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas. En asuntos públicos trabajamos la gestión de la reputación personal y corporativa. Nuestra visión holística nos consolida como líderes en planificación estratégica. Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.</p>
-            </div>
-        </div>
-        <div class="container" id="container-3">
-            <div class="contenido-grid" id="contenido-3">
-                <h2 id="seccion-titulo">Qué Hacemos</h2>
-                <p id="mision">Aseguramos la sustentabilidad de las inversiones creando un clima de negocios favorable a partir de información estratégica de mercado.</p>
-                <div class="item-descripcion" id="item-1">
-                    <h3>RELACIONAMIENTO</h3>
-                    <p>
-                        Alentamos y favorecemos el acercamiento entre las personas y las empresas con los gobiernos nacionales, locales y provinciales para crear condiciones sostenibles de progreso e inversión.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-2">
-                    <h3>MARCO REGULATORIO</h3>
-                    <p>
-                        A través del análisis del marco regulatorio y del seguimiento legislativo favorecemos la creación de condiciones que alienten la inversión y la generación de empleo.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-3">
-                    <h3>RADICACIÓN DE INVERSIONES</h3>
-                    <p>
-                        Asesoramos organizaciones en la formulación y el desarrollo de sus planes estratégicos, y también a nivel táctico en la implementación de sus proyectos.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-4">
-                    <h3>INTEGRIDAD & COMPLIANCE</h3>
-                    <p>
-                        Integridad, protección de datos y transparencia son activos reputacionales cada vez más valorados.
-                        Desarrollamos planes a medida de ética y compliance corporativo.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-5">
-                    <h3>COMUNICACIÓN & GESTIÓN DE CRISIS</h3>
-                    <p>
-                        Asesoramos 360° en el desarrollo del mensaje, el canal y la estrategia de medios para obtener beneficios y minimizar impacto.
-                    </p>
+        <section id="section-1">
+            <div class="container-1">
+                <!--<video class="video-back" autoplay loop muted plays-inline>
+                    <source src="./img/video-back.mp4" type="video/mp4">
+                </video>-->
+                <div class="visivia">
+                    <ul>
+                        <li>ASUNTOS PÚBLICOS</li>
+                        <li>GESTIÓN DE CRISIS</li>
+                        <li>RADICACIÓN DE EMPRESAS</li>
+                    </ul>
+                    <button>BROCHURE</button>
                 </div>
             </div>
-        </div>
-        <div class="container" id="container-4">
-            <div class="contenido-grid">
-                <h2 id="seccion-titulo">Identidad</h2>
-                <div class="item-descripcion" id="item-1">
-                    <img src="./img/creativity.png" alt="">
-                    <h3>Creatividad</h3>
-                    <p>
-                        Nuestros valores, bla bla bla. Valemos lo que decimos que valemos.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-2">
-                    <img src="./img/confidentiality.png" alt="">
-                    <h3>Confidencialidad</h3>
-                    <p>
-                        Por si no quedó en claro: somos íntegros. O algo así.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-3">
-                    <img src="./img/experience.png" alt="">
-                    <h3>Experiencia</h3>
-                    <p>
-                        En fin, tenemos valores y somos íntegros. Así que puede confiar en nosotros. Qué le ibamos a decir? Que no se puede confiar? Así no vendemos nada.
-                    </p>
-                </div>
-                <div class="item-descripcion" id="item-4">
-                    <img src="./img/integrity.png" alt="">
-                    <h3>Integridad</h3>
-                    <p>
-                        En fin, tenemos valores y somos íntegros. Así que puede confiar en nosotros. Qué le ibamos a decir? Que no se puede confiar? Así no vendemos nada.
-                    </p>
+        </section>
+        <section id="section-2">
+            <div class="container-2">
+                <div class="quienessomos">
+                    <h2 id="seccion-titulo">QUIÉNES SOMOS</h2>
+                    <hr id="linea-horz">
+                    <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas.<br>Nuestra visión holística nos consolida como líderes en planificación estratégica.<br>Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.<br> Trabajamos la gestión de la resputación personal y corporativa.</p>
                 </div>
             </div>
-        </div>
-        <div class="container" id="container-4">
-            <div class="contenido-grid" id="equipo">
-                <h2 id="seccion-titulo-blanco">nuestro equipo</h2>
-                <div class="equipo-miembro" id="equipo-1">
-                    <div>
-                        <h3>justin clusivo</h3>
-                        <p>Justin es pionero en aparecer en fotos stock pensadas para hacer racialmente inclusivas a las presentaciones de las empresas</p>
-                    </div>
-                </div>
-                <div class="equipo-miembro" id="equipo-2">
-                    <div>
-                        <h3>eilin fluencer</h3>
-                        <p>Eilin sacrifica todas sus horas de vida tratando de sacarse fotos perfectas de situaciones extraordinariamente comunes, con el fin de influenciar a la gente a ser más infeliz</p>
-                    </div>
-                </div>
-                <div class="equipo-miembro" id="equipo-3">
-                    <div>
-                        <h3>nico a. liade</h3>
-                        <p>Nico es un hombre heterosexual blanco que hace su máximo esfuerzo por quedar bien con todes. Es común escucharlo lanzar chistes políticamente correctos por los pasillos, los cuales jamás aterrizan</p>
-                    </div>
-                </div>
-                <div class="equipo-miembro" id="equipo-4">
-                    <div>
-                        <h3>hip ster</h3>
-                        <p>Hip es holandés. Cree que está por encima de todos sus compañeros. Le habla de forma condecendiente a todo el mundo y nadie se lo banca, porque su forma de comportarse resuena con las inseguridades de los demás</p>
+        </section>
+        <section id="section-3">
+            <div class="container-3">
+                <div class="quehacemos">
+                    <h2 id="seccion-titulo">QUÉ HACEMOS</h2>
+                    <hr id="linea-horz">
+                    <p id="mision">Aseguramos la sustentabilidad de las inversiones creando un clima de negocios favorable a partir de información estratégica de mercado.</p>
+                    <div class="grid">
+                        <div class="item-descripcion" id="item-1">
+                            <h3>RELACIONAMIENTO</h3>
+                            <p>
+                                Alentamos y favorecemos el acercamiento entre las personas y las empresas con los gobiernos nacionales, locales y provinciales para crear condiciones sostenibles de progreso e inversión.
+                            </p>
+                        </div>
+                        <div class="item-descripcion" id="item-2">
+                            <h3>MARCO REGULATORIO</h3>
+                            <p>
+                                A través del análisis del marco regulatorio y del seguimiento legislativo favorecemos la creación de condiciones que alienten la inversión y la generación de empleo.
+                            </p>
+                        </div>
+                        <div class="item-descripcion" id="item-3">
+                            <h3>RADICACIÓN DE INVERSIONES</h3>
+                            <p>
+                                Asesoramos organizaciones en la formulación y el desarrollo de sus planes estratégicos, y también a nivel táctico en la implementación de sus proyectos.
+                            </p>
+                        </div>
+                        <div class="item-descripcion" id="item-4">
+                            <h3>INTEGRIDAD & COMPLIANCE</h3>
+                            <p>
+                                Integridad, protección de datos y transparencia son activos reputacionales cada vez más valorados.
+                                Desarrollamos planes a medida de ética y compliance corporativo.
+                            </p>
+                        </div>
+                        <div class="item-descripcion" id="item-5">
+                            <h3>COMUNICACIÓN & GESTIÓN DE CRISIS</h3>
+                            <p>
+                                Asesoramos 360° en canalidad, desarrollo del mensaje y estrategia de medios para obtener beneficios y minimizar impacto negativo.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container" id="container-5">
-            <div class="contenido-grid" id="clientes">
-                <h2 id="seccion-titulo">clientes</h2>
-                <div class="item-descripcion" id="item-1">
-                    <h3>alianza 1</h3>
-                    <p>
-                        Esta alianza es muy buena porque nos permite mandarnos la parte con que la tenemos.
-                    </p>
-                    <h4>alguna palabra pretenciosa</h4>
-                </div>
-                <div class="item-descripcion" id="item-2">
-                    <h3>alianza 2</h3>
-                    <p>
-                        Esta otra alianza es igual de buena que la anterior. Nos permite decir que nuestra primer alianza no fue casualidad.
-                    </p>
-                    <h4>otra palabra pretenciosa</h4>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="container-7">
-            <div class="contenido-grid" id="contacto">
-                <h2 id="seccion-titulo">contacto</h2>
-                <div class="item-descripcion" id="item-1">
-                    <button class="contacto-boton" id="boton-1"></button>
-                    <h3>escríbenos</h3>
-                    <p>email@email.com</p>
-                </div>
-                <div class="item-descripcion" id="item-2">
-                    <button class="contacto-boton" id="boton-2"></button>
-                    <h3>llámanos</h3>
-                    <p>+54 9 11 1234 5678</p>
-                </div>
-                <div class="item-descripcion" id="item-3">
-                    <button class="contacto-boton" id="boton-3"></button>
-                    <h3>visítanos</h3>
-                    <p>dirección del lugar 1234<br>ciudad, provincia</p>
-                </div>
-                <div class="mapa" id="item-4">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.1604238414598!2d-58.45545614348678!3d-34.60338354089282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca06bc1414ad%3A0xc1ab6ce5d45b51df!2sAv.%20Juan%20Bautista%20Justo%203728%2C%20C1416%20CABA!5e0!3m2!1sen!2sar!4v1676646993344!5m2!1sen!2sar" width="800" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+        <section id="section-4">
+            <div class="container-4">
+                <div class="identidad">
+                    <h2 id="seccion-titulo">IDENTIDAD</h2>
+                    <hr id="linea-horz">
+                    <div class="item-descripcion" id="item-1">
+                        <img src="./img/creativity.png" width="90px" alt="logo creatividad">
+                        <h3>CREATIVIDAD</h3>
+                    </div>
+                    <div class="item-descripcion" id="item-2">
+                        <img src="./img/confidentiality.png" width="90px" alt="logo confidencialidad">
+                        <h3>CONFIDENCIALIDAD</h3>
+                    </div>
+                    <div class="item-descripcion" id="item-3">
+                        <img src="./img/experience.png" width="90px" alt="logo experiencia">
+                        <h3>EXPERIENCIA</h3>
+                    </div>
+                    <div class="item-descripcion" id="item-4">
+                        <img src="./img/integrity.png" width="90px" alt="logo integridad">
+                        <h3>INTEGRIDAD</h3>
+                    </div>
+                    <div class="item-descripcion" id="item-5">
+                        <img src="./img/professional.png" width="90px" alt="logo integridad">
+                        <h3>PROFESIONALISMO</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="container" id="container-8">
-            <div class="contenido">
-                <h2 id="seccion-titulo">suscríbete</h2>
-                <form action="">
-                    <input type="text" placeholder="Nombre y Apellido">
-                    <input type="text" placeholder="Empesa/Institución/Organismo/Particular/Otro">
-                    <input type="text" placeholder="Cargo/Actividad">
-                    <input type="text" placeholder="E-Mail">
-                </form>
-                <button>enviar</button>
+        </section>
+        <section id="section-5">
+            <div class="container-5">
+                <div class="equipo">
+                    <h2 id="seccion-titulo">HAY EQUIPO</h2>
+                    <hr id="linea-horz">
+                    <div class="equipo-miembro" id="miembro-1">
+                        <div>
+                            <h3>Miguel Castaños Zemborain</h3>
+                        </div>
+                    </div>
+                    <div class="equipo-miembro" id="miembro-2">
+                        <div>
+                            <h3>Lula Alvarez</h3>
+                        </div>
+                    </div>
+                    <div class="equipo-miembro" id="miembro-3">
+                        <div>
+                            <h3>Carolina Llavallol</h3>
+                        </div>
+                    </div>
+                    <div class="equipo-miembro" id="miembro-4">
+                        <div>
+                            <h3>Manuel Biedma</h3>
+                        </div>
+                    </div>
+                    <div class="equipo-miembro" id="miembro-5">
+                        <div>
+                            <h3>Mariana Mangiarotti</h3>
+                        </div>
+                    </div>
+                    <div class="equipo-miembro" id="miembro-6">
+                        <div>
+                            <h3>Enrique Eiras</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="contenido-row">
-                <div class="instagram"></div>
-                <div class="linkedin"></div>
+        </section>
+        <section id="section-6">
+            <div class="container-6">
+                <div class="alianzas">
+                    <h2 id="seccion-titulo">ALIANZAS ESTRATÉGICAS</h2>
+                    <hr id="linea-horz">
+                    <div class="item-descripcion" id="item-1">
+                        <img src="./img/kom-logo.png" height="50" alt="kom chile logo">
+                        <h3>KOM CHILE</h3>
+                        <a href="https://komchile.cl/" target="_blank">Ir a KOM CHILE</a>
+                    </div>
+                    <div class="item-descripcion" id="item-2">
+                        <img src="./img/empresa2-logo.png" height="50" alt="empresa 2 logo">
+                        <h3>UNA EMPRESA ESPAÑOLA</h3>
+                        <a href="" target="_blank">Ir a...</a> 
+                    </div>
+                </div>
             </div>
-        </div>
-        <a href="#container-1" class="volver">volver al inicio</a>
+        </section>
+        <section id="section-7">
+            <div class="container-7">
+                <div class="contacto">
+                    <h2 id="seccion-titulo">CONTACTO</h2>
+                    <hr id="linea-horz">
+                    <form class="formulario" action="">
+                        <div class="formulario-datos">
+                            <div id="nombre-apellido">
+                                <label>Nombre y Apellido</label>
+                                <input type="text" placeholder="">
+                            </div>
+                            <div id="telefono">
+                                <label>Teléfono</label>
+                                <input type="text" placeholder="">
+                            </div>
+                            <div id="email">
+                                <label>Correo Electrónico</label>
+                                <input type="text" placeholder="">
+                            </div>
+                        </div>
+                        <div class="formulario-resto">
+                            <div id="consulta">
+                                <label>Consulta</label>
+                                <input type="text" placeholder="">
+                            </div>
+                            <div id="enviar">
+                                <input type="submit" value="ENVIAR">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-izquierdo">
+                <div>
+                    <img id="footer-logo" src="./img/visivia-blanco.png" alt="">
+                </div>
+                <div class="redes-sociales">
+                    <img src="./img/linkedin-in.svg" width="30" alt="">
+                    <img src="./img/instagram.svg" width="30" alt="">
+                </div>
+            </div>
+            <div class="footer-derecho">
+                <ul>
+                    <li><a href="#container-1">Inicio</a></li>
+                    <li><a href="#container-2">Quiénes Somos</a></li>
+                    <li><a href="#container-3">Qué Hacemos</a></li>
+                    <li><a href="#container-4">Identidad</a></li>
+                    <li><a href="#container-5">Hay Equipo</a></li>
+                    <li><a href="#container-6">Alianzas Estratégicas</a></li>
+                    <li><a href="#container-7">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyrights">
+            <hr>
+            <p>Todos los derechos reservados 2023 Visivia</p>
+        </div>
+    </footer>
 </body>
 </html>
