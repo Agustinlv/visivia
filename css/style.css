@@ -46,7 +46,7 @@ header{
     bottom: 5px;
 }
 
-.navbar ul{
+.menu{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -54,7 +54,7 @@ header{
     width: 750px;
 }
 
-.navbar ul li a{
+.menu li a{
     color: rgb(83, 119, 134);
     font-weight: 900;
     font-size: 0.8rem;
@@ -63,10 +63,58 @@ header{
     text-transform: uppercase;
 }
 
-.navbar ul li a:hover{
+.menu li a:hover{
     color:  rgb(2, 70, 135);
     border-bottom: 3px solid  rgb(2, 70, 135);
     padding: 10px 0px;
+}
+
+.menu-button-container{
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-button, .menu-button::before, .menu-button::after{
+    display: block;
+    background-color:  rgb(2, 70, 135);
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23,1,0.32,1);
+    border-radius: 2px;
+}
+
+.menu-button::before{
+    content: "";
+    margin-top: -8px;
+}
+
+.menu-button::after{
+    content: "";
+    margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+  
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
 }
 
 main{
@@ -85,10 +133,6 @@ section{
     position: relative;
 }
 
-h1{
-    font-size: 4.5rem;
-}
-
 h2{
     letter-spacing: 0.3rem;
 }
@@ -104,7 +148,7 @@ h2{
     color: white;
 }
 
-.container-2, #container-4, #container-6{
+.container-2, .container-4, .container-6{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +159,7 @@ h2{
     color:rgb(2, 70, 135);
 }
 
-.container-3, #container-5, #container-7{
+.container-3, .container-5, .container-7{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -132,7 +176,6 @@ h2{
     justify-content: center;
     align-items: center;
     opacity: 90%;
-    gap: 80px;
     position: absolute;
     width: fit-content;
 }
@@ -143,7 +186,8 @@ h2{
     font-weight: 700;
     line-height: 6rem;
     letter-spacing: 0.1rem;
-    width: 1000px;
+    width: fit-content;
+    margin-bottom: 80px;
 }
 
 .visivia button{
@@ -161,7 +205,9 @@ h2{
     left: 0px;
     top: 0px;
     height: auto;
+    width: 100%;
     z-index: -1;
+    overflow: none;
 }
 
 @media (max-aspect-ratio: 16/9) {
@@ -171,12 +217,31 @@ h2{
     }
 }
 
+#seccion-titulo{
+    grid-area: seccion-titulo;
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+}
+
+#linea-horz{
+    grid-area: linea-horz;
+    border-top: 3px solid;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    width: 200px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
 .quienessomos{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 900px;
+    width: fit-content;
     opacity: 90%;
 }
 
@@ -188,7 +253,8 @@ h2{
     font-weight: 600;
     text-align: center;
     line-height: 2.25rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.025rem;
+    width: 900px;
 }
 
 .quehacemos{
@@ -204,15 +270,16 @@ h2{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo seccion-titulo" "linea-horz linea-horz" "mision mision" "item-1 item-2" "item-3 item-4" "item-5 item-5";
+    grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-5";
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 40px;
 }
 
 #mision{
     grid-area: mision;
     padding: 20px;
+    margin-bottom: 40px;
     border: 1px solid;
     border-radius: 5px;
     font-size: 1.15rem;
@@ -220,48 +287,60 @@ h2{
     width: 900px;
     text-align: center;
     line-height: 2.25rem;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.025rem;
 }
 
 .identidad{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "linea-horz linea-horz linea-horz" "item-1 item-2 item-3" "item-4 item-5 item-6";
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding: 150px;
-    gap: 50px;
     opacity: 90%;
+}
+
+.identidad .grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "item-1 item-2 item-3" "item-4 item-5 item-6";
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
 }
 
 .equipo{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo seccion-titulo seccion-titulo" "linea-horz linea-horz linea-horz" "item-1 item-2 item-3" "item-4 item-5 item-6";
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: fit-content;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    gap: 50px;
     opacity: 90%;
 }
 
-.alianzas{
+.equipo .grid{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo seccion-titulo" "linea-horz linea-horz" "item-1 item-2";
+    grid-template-areas: "item-1 item-2 item-3" "item-4 item-5 item-6";
+    gap: 90px;
+}
+
+.alianzas{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 900px;
-    padding-top: 150px;
-    padding-bottom: 150px;
-    gap: 50px;
+    width: fit-content;
     opacity: 90%;
+}
+
+.alianzas .grid{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "item-1 item-2";
+    width: 900px;
 }
 
 .item-descripcion{
@@ -282,6 +361,7 @@ h2{
     display: flex;
     font-size: 1rem;
     text-align: center;
+    letter-spacing: 0.015px;
     width: 450px;
 }
 
@@ -292,25 +372,6 @@ h2{
     padding: 10px 15px;
     border-radius: 2px;
     margin-top: 30px;
-}
-
-#seccion-titulo{
-    grid-area: seccion-titulo;
-    display: flex;
-    justify-content: center;
-    font-size: 3.5rem;
-    margin-bottom: 40px;
-}
-
-#linea-horz{
-    grid-area: linea-horz;
-    border-top: 3px solid;
-    border-bottom: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    width: 200px;
-    margin: auto;
-    margin-bottom: 40px;
 }
 
 #item-1{
@@ -402,15 +463,11 @@ h2{
 }
 
 .contacto{
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    grid-template-areas: "seccion-titulo" "linea-horz" "formulario";
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 900px;
-    padding: 150px;
-    gap: 50px;
+    width: fit-content;
     opacity: 90%;
 }
 
@@ -420,9 +477,9 @@ h2{
     grid-template-columns: auto;
     grid-template-rows: auto;
     grid-template-areas: "formulario-datos formulario-resto";
-    width: 800px;
+    width: 900px;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     letter-spacing: 0.1rem;
 }
 
@@ -482,20 +539,7 @@ footer{
     height: fit-content;
     width: 100vw;
     background-color: #1E2529;
-    padding: 20px;
-}
-
-footer ul{
-    list-style: none;
-    text-transform: uppercase;
-}
-
-footer ul a{
-    text-decoration: none;
-    color: white;
-    font-weight: 900;
-    font-size: 0.75rem;
-    letter-spacing: 0.1rem;
+    padding: 40px;
 }
 
 .footer-container{
@@ -514,6 +558,22 @@ footer ul a{
     display: flex;
     justify-content: center;
     width: 450px;
+}
+
+.footer-derecho ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.footer-derecho ul a{
+    text-decoration: none;
+    color: white;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
 }
 
 #footer-logo{
@@ -536,88 +596,371 @@ footer ul a{
 
 .copyrights hr{
     border-top: 1px solid white;
-    width: 400px;
-    margin-bottom: 10px;
-}
-
-
-@media screen and (max-width: 720px){
-    .navbar ul li{
-        display: none;
-    }
-
-    #contenido-3{
-        grid-template-areas: "seccion-titulo seccion-titulo" "linea-horz linea-horz" "mision mision" "item-1 item-2" "item-3 item-4" "item-5 item-5";
-    }
+    width: 1000px;
+    margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1000px){
-    #nav-logo{
-        width: 100px;
-        margin-right: 10px;
-    }
-
     .navbar{
-        justify-content: space-evenly;
         height: 70px;
-        width: 750px;
+        width: 700px;
+        padding: 0px 10px;
     }
-
+    
+    #nav-logo{
+        width: 90px;
+        bottom: 3px;
+    }
+    
     .navbar ul{
         width: 600px;
     }
-
+    
     .navbar ul li a{
-        font-size: 0.65rem;
-    }
-
-    section{
-        height: 800px;
+        font-size: 0.6rem;
     }
     
-    #seccion-titulo{
-        font-size: 2.5rem;
+    h2{
+        letter-spacing: 0.3rem;
     }
-  
+
     .visivia ul{
-        font-size: 2.75rem;
+        font-size: 2.5rem;
+        font-weight: 700;
         line-height: 4rem;
-        width: 620px;
     }
     
     .visivia button{
         font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    #seccion-titulo{
+        font-size: 2.25rem;
+        margin-bottom: 40px;
+    }
+    
+    #linea-horz{
+        margin-bottom: 40px;
+    }
+    
+    .quienessomos p{
+        padding: 10px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        width: 670px;
+    }
+    
+    .quehacemos .grid{
+        gap: 30px;
+    }
+    
+    #mision{
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        width: 670px;
+    }
+    
+    .identidad .grid{
+        grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-5";
+        gap: 40px;
+    }
+    
+    .equipo .grid{
+        grid-template-areas: "item-1 item-2" "item-3 item-4" "item-5 item-6";
+        gap: 40px;
+    }
+    
+    .alianzas .grid{
+        width: 670px;
+    }
+    
+    .item-descripcion{
+        gap: 10px;
+    }
+    
+    .item-descripcion h3{
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+    }
+    
+    .item-descripcion p{
+        font-size: 0.8rem;
+        width: 300px;
+    }
+    
+    .formulario{
+        grid-template-areas: "formulario-datos" "formulario-resto";
+        width: 670px;
+        font-size: 1rem;
+        gap: 30px;
+    }
+    
+    .formulario-datos{
+        grid-area: formulario-datos;
+        gap: 30px;
+    }
+    
+    .formulario-resto{
+        gap: 30px;
+    }
+
+    #nombre-apellido input{
+        width: 400px;
+    }
+
+    #telefono input{
+        width: 400px;
+    }
+
+    #email input{
+        width: 400px;
+    }
+    
+    #consulta input{
+        width: 400px;
+    }
+    
+    .footer-izquierdo{
+        justify-content: space-evenly;
+        width: 300px;
+    }
+    
+    .footer-derecho{
+        width: 300px;
+    }
+    
+    .footer-derecho ul{
+        gap: 5px;
+    }
+    
+    .footer-derecho ul a{
+        font-size: 0.65rem;
+    }
+    
+    #footer-logo{
+        width: 150px;
+    }
+    
+    .redes-sociales{
+        width: 300px;
+        gap: 20px;
+    }
+    
+    .copyrights hr{
+        width: 670px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .navbar{
+        height: 60px;
+        margin: 0px 20px;
+        justify-content: space-between;
+    }
+
+    #nav-logo{
+        width: 90px;
+        bottom: 3px;
+    }
+
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 60px;
+        width: 100vw;
+    }
+
+    .menu > li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+
+    .menu > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+
+    .menu li a{
+        font-size: 0.6rem;
+    }
+
+    #menu-toggle ~.menu li{
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked ~.menu li{
+        border: 1px solid #333;
+        height: 30px;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    h2{
+        letter-spacing: 0.3rem;
+    }
+
+    .container-1{
+        height: 500px;
+    }
+
+    .container-2, .container-4, .container-6, .container-3, .container-5, .container-7{
+        height: fit-content;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .visivia ul{
+        font-size: 1.65rem;
+        line-height: 3rem;
+    }
+    
+    .visivia button{
+        font-size: 0.8rem;
+    }
+
+    .video-back{
+        display: none;
+    }
+
+    #seccion-titulo{
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    #linea-horz{
+        margin-bottom: 30px;
     }
 
     .quienessomos p{
-        padding: 20px 20px;
+        padding: 10px;
         font-size: 0.9rem;
-        width: 650px;
+        line-height: 1.5rem;
+        width: 400px;
+    }
+
+    .quehacemos .grid{
+        grid-template-areas: "item-1" "item-2" "item-3" "item-4" "item-5";
+        gap: 30px;
+    }
+
+    #mision{
+        padding: 10px;
+        margin-bottom: 40px;
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        width: 400px;
+    }
+
+    .equipo .grid{
+        gap: 20px;
+    }
+
+    .alianzas .grid{
+        grid-template-areas: "item-1" "item-2";
+        width: 400px;
+        gap: 40px;
+    }
+
+    .item-descripcion{
+        gap: 10px;
     }
 
     .item-descripcion h3{
         font-size: 1rem;
-        letter-spacing: 0.1rem;
+        letter-spacing: 0.15rem;
     }
-    
+
     .item-descripcion p{
-        font-size: 0.85rem;
-        text-align: center;
+        font-size: 0.8rem;
         width: 300px;
+        letter-spacing: 0.06rem;
     }
 
-    .quehacemos{
-        grid-template-areas: "seccion-titulo seccion-titulo" "linea-horz linea-horz" "mision mision" "item-1" "item-2" "item-3" "item-4" "item-5" "item-5";
+    .item-descripcion a{
+        font-size: 0.75rem;
+    }
+
+    .formulario{
+        grid-template-areas: "formulario-datos" "formulario-resto";
+        width: 400px;
+        font-size: 1rem;
+        gap: 30px;
     }
     
-    .quehacemos p{
-        display: flex;
-        letter-spacing: 0.03rem;
+    .formulario-datos{
+        grid-area: formulario-datos;
+        gap: 30px;
+    }
+    
+    .formulario-resto{
+        gap: 30px;
     }
 
-    #mision{
-        padding: 20px 20px;
-        font-size: 0.9rem;
-        width: 650px;
+    #nombre-apellido input{
+        width: 400px;
+    }
+
+    #telefono input{
+        width: 400px;
+    }
+
+    #email input{
+        width: 400px;
+    }
+    
+    #consulta input{
+        width: 400px;
+    }
+    
+    .footer-izquierdo{
+        justify-content: space-evenly;
+        width: 200px;
+    }
+    
+    .footer-derecho{
+        width: 200px;
+    }
+    
+    .footer-derecho ul{
+        gap: 2px;
+    }
+    
+    .footer-derecho ul a{
+        font-size: 0.65rem;
+    }
+    
+    #footer-logo{
+        width: 120px;
+    }
+    
+    .redes-sociales{
+        width: 200px;
+        gap: 20px;
+    }
+    
+    .copyrights hr{
+        width: 400px;
+    }
+
+    .copyrights p{
+        font-size: 0.8rem;
     }
 }

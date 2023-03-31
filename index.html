@@ -14,7 +14,11 @@
     <header>
         <nav class="navbar">
             <a href="#section-1"><img id="nav-logo" src="./img/visivia.png" alt="visivia logo"></a>
-            <ul>
+            <input id="menu-toggle" type="checkbox"/>
+            <label class="menu-button-container" for="menu-toggle">
+                <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
                 <li><a href="#section-2">quiénes somos</a></li>
                 <li><a href="#section-3">qué hacemos</a></li>
                 <li><a href="#section-4">identidad</a></li>
@@ -27,9 +31,11 @@
     <main>
         <section id="section-1">
             <div class="container-1">
-                <!--<video class="video-back" autoplay loop muted plays-inline>
+                <!--
+                <video class="video-back" autoplay loop muted plays-inline>
                     <source src="./img/video-back.mp4" type="video/mp4">
-                </video>-->
+                </video>
+                -->
                 <div class="visivia">
                     <ul>
                         <li>ASUNTOS PÚBLICOS</li>
@@ -45,7 +51,7 @@
                 <div class="quienessomos">
                     <h2 id="seccion-titulo">QUIÉNES SOMOS</h2>
                     <hr id="linea-horz">
-                    <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas.<br>Nuestra visión holística nos consolida como líderes en planificación estratégica.<br>Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.<br> Trabajamos la gestión de la resputación personal y corporativa.</p>
+                    <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas.<br><br>Nuestra visión holística nos consolida como líderes en planificación estratégica.<br><br>Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.<br><br> Trabajamos la gestión de la resputación personal y corporativa.</p>
                 </div>
             </div>
         </section>
@@ -96,25 +102,27 @@
                 <div class="identidad">
                     <h2 id="seccion-titulo">IDENTIDAD</h2>
                     <hr id="linea-horz">
-                    <div class="item-descripcion" id="item-1">
-                        <img src="./img/creativity.png" width="90px" alt="logo creatividad">
-                        <h3>CREATIVIDAD</h3>
-                    </div>
-                    <div class="item-descripcion" id="item-2">
-                        <img src="./img/confidentiality.png" width="90px" alt="logo confidencialidad">
-                        <h3>CONFIDENCIALIDAD</h3>
-                    </div>
-                    <div class="item-descripcion" id="item-3">
-                        <img src="./img/experience.png" width="90px" alt="logo experiencia">
-                        <h3>EXPERIENCIA</h3>
-                    </div>
-                    <div class="item-descripcion" id="item-4">
-                        <img src="./img/integrity.png" width="90px" alt="logo integridad">
-                        <h3>INTEGRIDAD</h3>
-                    </div>
-                    <div class="item-descripcion" id="item-5">
-                        <img src="./img/professional.png" width="90px" alt="logo integridad">
-                        <h3>PROFESIONALISMO</h3>
+                    <div class="grid">
+                        <div class="item-descripcion" id="item-1">
+                            <img src="./img/creativity.png" width="90px" alt="logo creatividad">
+                            <h3>CREATIVIDAD</h3>
+                        </div>
+                        <div class="item-descripcion" id="item-2">
+                            <img src="./img/confidentiality.png" width="90px" alt="logo confidencialidad">
+                            <h3>CONFIDENCIALIDAD</h3>
+                        </div>
+                        <div class="item-descripcion" id="item-3">
+                            <img src="./img/experience.png" width="90px" alt="logo experiencia">
+                            <h3>EXPERIENCIA</h3>
+                        </div>
+                        <div class="item-descripcion" id="item-4">
+                            <img src="./img/integrity.png" width="90px" alt="logo integridad">
+                            <h3>INTEGRIDAD</h3>
+                        </div>
+                        <div class="item-descripcion" id="item-5">
+                            <img src="./img/professional.png" width="90px" alt="logo integridad">
+                            <h3>PROFESIONALISMO</h3>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -124,34 +132,36 @@
                 <div class="equipo">
                     <h2 id="seccion-titulo">HAY EQUIPO</h2>
                     <hr id="linea-horz">
-                    <div class="equipo-miembro" id="miembro-1">
-                        <div>
-                            <h3>Miguel Castaños Zemborain</h3>
+                    <div class="grid">
+                        <div class="equipo-miembro" id="miembro-1">
+                            <div>
+                                <h3>Miguel Castaños Zemborain</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="equipo-miembro" id="miembro-2">
-                        <div>
-                            <h3>Lula Alvarez</h3>
+                        <div class="equipo-miembro" id="miembro-2">
+                            <div>
+                                <h3>Lula Alvarez</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="equipo-miembro" id="miembro-3">
-                        <div>
-                            <h3>Carolina Llavallol</h3>
+                        <div class="equipo-miembro" id="miembro-3">
+                            <div>
+                                <h3>Carolina Llavallol</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="equipo-miembro" id="miembro-4">
-                        <div>
-                            <h3>Manuel Biedma</h3>
+                        <div class="equipo-miembro" id="miembro-4">
+                            <div>
+                                <h3>Manuel Biedma</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="equipo-miembro" id="miembro-5">
-                        <div>
-                            <h3>Mariana Mangiarotti</h3>
+                        <div class="equipo-miembro" id="miembro-5">
+                            <div>
+                                <h3>Mariana Mangiarotti</h3>
+                            </div>
                         </div>
-                    </div>
-                    <div class="equipo-miembro" id="miembro-6">
-                        <div>
-                            <h3>Enrique Eiras</h3>
+                        <div class="equipo-miembro" id="miembro-6">
+                            <div>
+                                <h3>Enrique Eiras</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -162,15 +172,17 @@
                 <div class="alianzas">
                     <h2 id="seccion-titulo">ALIANZAS ESTRATÉGICAS</h2>
                     <hr id="linea-horz">
-                    <div class="item-descripcion" id="item-1">
-                        <img src="./img/kom-logo.png" height="50" alt="kom chile logo">
-                        <h3>KOM CHILE</h3>
-                        <a href="https://komchile.cl/" target="_blank">Ir a KOM CHILE</a>
-                    </div>
-                    <div class="item-descripcion" id="item-2">
-                        <img src="./img/empresa2-logo.png" height="50" alt="empresa 2 logo">
-                        <h3>UNA EMPRESA ESPAÑOLA</h3>
-                        <a href="" target="_blank">Ir a...</a> 
+                    <div class="grid">
+                        <div class="item-descripcion" id="item-1">
+                            <img src="./img/kom-logo.png" height="50" alt="kom chile logo">
+                            <h3>KOM CHILE</h3>
+                            <a href="https://komchile.cl/" target="_blank">Ir a KOM CHILE</a>
+                        </div>
+                        <div class="item-descripcion" id="item-2">
+                            <img src="./img/empresa2-logo.png" height="50" alt="empresa 2 logo">
+                            <h3>UNA EMPRESA ESPAÑOLA</h3>
+                            <a href="" target="_blank">Ir a...</a> 
+                        </div>
                     </div>
                 </div>
             </div>
@@ -222,13 +234,13 @@
             </div>
             <div class="footer-derecho">
                 <ul>
-                    <li><a href="#container-1">Inicio</a></li>
-                    <li><a href="#container-2">Quiénes Somos</a></li>
-                    <li><a href="#container-3">Qué Hacemos</a></li>
-                    <li><a href="#container-4">Identidad</a></li>
-                    <li><a href="#container-5">Hay Equipo</a></li>
-                    <li><a href="#container-6">Alianzas Estratégicas</a></li>
-                    <li><a href="#container-7">Contacto</a></li>
+                    <li><a href="#section-1">Inicio</a></li>
+                    <li><a href="#section-2">Quiénes Somos</a></li>
+                    <li><a href="#section-3">Qué Hacemos</a></li>
+                    <li><a href="#section-4">Identidad</a></li>
+                    <li><a href="#section-5">Hay Equipo</a></li>
+                    <li><a href="#section-6">Alianzas Estratégicas</a></li>
+                    <li><a href="#section-7">Contacto</a></li>
                 </ul>
             </div>
         </div>
