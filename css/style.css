@@ -38,6 +38,7 @@ header{
     transition: 500ms;
     width: 1000px;
     padding: 0px 25px;
+    overflow: hidden;
 }
 
 #nav-logo{
@@ -46,7 +47,7 @@ header{
     bottom: 5px;
 }
 
-.menu{
+#menu{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -54,7 +55,7 @@ header{
     width: 750px;
 }
 
-.menu li a{
+#menu li a{
     color: rgb(83, 119, 134);
     font-weight: 900;
     font-size: 0.8rem;
@@ -63,58 +64,14 @@ header{
     text-transform: uppercase;
 }
 
-.menu li a:hover{
+#menu li a:hover{
     color:  rgb(2, 70, 135);
     border-bottom: 3px solid  rgb(2, 70, 135);
     padding: 10px 0px;
 }
 
-.menu-button-container{
-    display: none;
-    height: 100%;
-    width: 30px;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 #menu-toggle{
     display: none;
-}
-
-.menu-button, .menu-button::before, .menu-button::after{
-    display: block;
-    background-color:  rgb(2, 70, 135);
-    position: absolute;
-    height: 4px;
-    width: 30px;
-    transition: transform 400ms cubic-bezier(0.23,1,0.32,1);
-    border-radius: 2px;
-}
-
-.menu-button::before{
-    content: "";
-    margin-top: -8px;
-}
-
-.menu-button::after{
-    content: "";
-    margin-top: 8px;
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button::before {
-    margin-top: 0px;
-    transform: rotate(405deg);
-}
-
-#menu-toggle:checked + .menu-button-container .menu-button {
-    background: rgba(255, 255, 255, 0);
-}
-  
-#menu-toggle:checked + .menu-button-container .menu-button::after {
-    margin-top: 0px;
-    transform: rotate(-405deg);
 }
 
 main{
@@ -612,11 +569,12 @@ footer{
         bottom: 3px;
     }
     
-    .navbar ul{
+    #menu{
+        display: flex;
         width: 600px;
     }
     
-    .navbar ul li a{
+    #menu li a{
         font-size: 0.6rem;
     }
     
@@ -757,7 +715,7 @@ footer{
 @media screen and (max-width: 720px){
     .navbar{
         height: 60px;
-        margin: 0px 20px;
+        margin: 0px 40px;
         justify-content: space-between;
     }
 
@@ -766,51 +724,61 @@ footer{
         bottom: 3px;
     }
 
-    .menu-button-container {
-        display: flex;
-    }
-
-    .menu {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    #menu{
+        display: none;
         position: absolute;
         top: 0;
-        left: 0;
         margin-top: 60px;
-        width: 100vw;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
-    .menu > li {
+    #menu li{
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 0;
+        background-color: rgb(128,128,128);
         width: 100%;
+        height: 20px;
+        border-bottom: 1px solid rgb(2, 70, 135);
+    }
+
+    #menu li a{
         color: white;
-        background-color: #222;
+        font-size: 0.5rem;
+        font-weight: 400;
     }
 
-    .menu > li:not(:last-child) {
-        border-bottom: 1px solid #444;
+    #menu-toggle-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+        height: 60px;
+        width: 60px;
     }
 
-    .menu li a{
-        font-size: 0.6rem;
+    #menu-toggle,
+    #menu-toggle::before,
+    #menu-toggle::after{
+        display: block;
+        background-color: rgb(2, 70, 135);
+        height: 4px;
+        width: 30px;
+        border-radius: 2px;
     }
-
-    #menu-toggle ~.menu li{
-        height: 0;
-        margin: 0;
-        padding: 0;
-        border: 0;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    
+    #menu-toggle::before{
+        content: "";
+        margin-top: -8px;
     }
-
-    #menu-toggle:checked ~.menu li{
-        border: 1px solid #333;
-        height: 30px;
-        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    
+    #menu-toggle::after{
+        content: "";
+        margin-top: 12px;
     }
 
     h2{

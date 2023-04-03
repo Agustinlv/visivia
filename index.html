@@ -13,19 +13,18 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="#section-1"><img id="nav-logo" src="./img/visivia.png" alt="visivia logo"></a>
-            <input id="menu-toggle" type="checkbox"/>
-            <label class="menu-button-container" for="menu-toggle">
-                <div class="menu-button"></div>
-            </label>
-            <ul class="menu">
-                <li><a href="#section-2">quiénes somos</a></li>
-                <li><a href="#section-3">qué hacemos</a></li>
-                <li><a href="#section-4">identidad</a></li>
-                <li><a href="#section-5">hay equipo</a></li>
-                <li><a href="#section-6">alianzas estratégicas</a></li>
-                <li><a href="#section-7">contacto</a></li>
+            <a id="menu-link" href="#section-1"><img id="nav-logo" src="./img/visivia.png" alt="visivia logo"></a>
+            <ul id="menu">
+                <li><a id="menu-link" href="#section-2">quiénes somos</a></li>
+                <li><a id="menu-link" href="#section-3">qué hacemos</a></li>
+                <li><a id="menu-link" href="#section-4">identidad</a></li>
+                <li><a id="menu-link" href="#section-5">hay equipo</a></li>
+                <li><a id="menu-link" href="#section-6">alianzas estratégicas</a></li>
+                <li><a id="menu-link" href="#section-7">contacto</a></li>
             </ul>
+            <div id="menu-toggle-container">
+                <div id="menu-toggle"></div>
+            </div>
         </nav>
     </header>
     <main>
@@ -250,4 +249,5 @@
         </div>
     </footer>
 </body>
+<script src="js/menu.js"></script>
 </html>
