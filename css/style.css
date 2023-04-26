@@ -5,6 +5,7 @@
     font-family: 'Lato', sans-serif;
     user-select: none;
     border-color: #1E2529;
+    text-rendering: optimizeLegibility;
 }
 
 html{
@@ -35,7 +36,6 @@ header{
     justify-content: space-evenly;
     align-items: center;
     height: 80px;
-    transition: 500ms;
     width: 1000px;
     padding: 0px 25px;
     overflow: hidden;
@@ -88,6 +88,7 @@ section{
     width: 100vw;
     height: fit-content;
     position: relative;
+    overflow: hidden;
 }
 
 h2{
@@ -141,7 +142,7 @@ h2{
     list-style: none;
     font-size: 4rem;
     font-weight: 700;
-    line-height: 6rem;
+    line-height: 7rem;
     letter-spacing: 0.1rem;
     width: fit-content;
     margin-bottom: 80px;
@@ -165,13 +166,6 @@ h2{
     width: 100%;
     z-index: -1;
     overflow: none;
-}
-
-@media (max-aspect-ratio: 16/9) {
-    .video-back {
-        width: auto;
-        height: 100%;
-    }
 }
 
 #seccion-titulo{
@@ -312,6 +306,7 @@ h2{
     font-size: 1.5rem;
     letter-spacing: 0.15rem;
     text-align: center;
+    margin-top: 20px;
 }
 
 .item-descripcion p{
@@ -328,7 +323,8 @@ h2{
     color: white;
     padding: 10px 15px;
     border-radius: 2px;
-    margin-top: 30px;
+    margin-top: 20px;
+    font-size: 0.9rem;
 }
 
 #item-1{
@@ -428,6 +424,12 @@ h2{
     opacity: 90%;
 }
 
+#formulario-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .formulario{
     grid-area: formulario;
     display: grid;
@@ -436,16 +438,18 @@ h2{
     grid-template-areas: "formulario-datos formulario-resto";
     width: 900px;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
 }
 
 .formulario input{
     margin-top: 10px;
-    width: 300px;
-    height: 25px;
+    width: 400px;
+    height: 30px;
     text-indent: 2px;
     border: 0px none;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 .formulario-datos{
@@ -469,23 +473,28 @@ h2{
     gap: 20px;
 }
 
-#consulta input{
+#consulta textarea{
     display: flex;
     justify-content: flex-start;
     align-items: start;
     height: 200px;
     width: 400px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 3px;
+    margin-top: 10px;
 }
 
-#enviar input{
-    width: 100px;
+#enviar{
+    width: 400px;
     height: 40px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 600;
     background-color:rgb(2, 70, 135);
     color: white;
     border: 0px;
     border-radius: 3px;
+    cursor: pointer;
 }
 
 footer{
@@ -570,7 +579,6 @@ footer{
     }
     
     #menu{
-        display: flex;
         width: 600px;
     }
     
@@ -585,7 +593,7 @@ footer{
     .visivia ul{
         font-size: 2.5rem;
         font-weight: 700;
-        line-height: 4rem;
+        line-height: 5rem;
     }
     
     .visivia button{
@@ -651,13 +659,13 @@ footer{
     
     .formulario{
         grid-template-areas: "formulario-datos" "formulario-resto";
-        width: 670px;
+        justify-content: center;
+        width: 800px;
         font-size: 1rem;
         gap: 30px;
     }
     
     .formulario-datos{
-        grid-area: formulario-datos;
         gap: 30px;
     }
     
@@ -725,15 +733,18 @@ footer{
     }
 
     #menu{
-        display: none;
-        position: absolute;
-        top: 0;
-        margin-top: 60px;
-        left: 0;
+        display: flex;
         flex-direction: column;
-        width: 100%;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        margin-top: 60px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0px;
+        opacity: 90%;
+        overflow: hidden;
     }
 
     #menu li{
@@ -742,14 +753,15 @@ footer{
         align-items: center;
         background-color: rgb(128,128,128);
         width: 100%;
-        height: 20px;
+        height: fit-content;
+        padding: 8px 0px;
         border-bottom: 1px solid rgb(2, 70, 135);
     }
 
     #menu li a{
         color: white;
-        font-size: 0.5rem;
-        font-weight: 400;
+        font-size: 0.8rem;
+        font-weight: 600;
     }
 
     #menu-toggle-container{
@@ -786,7 +798,7 @@ footer{
     }
 
     .container-1{
-        height: 500px;
+        height: 800px;
     }
 
     .container-2, .container-4, .container-6, .container-3, .container-5, .container-7{
@@ -796,8 +808,9 @@ footer{
     }
 
     .visivia ul{
-        font-size: 1.65rem;
-        line-height: 3rem;
+        font-size: 1.5em;
+        line-height: 4rem;
+        margin-bottom: 120px;
     }
     
     .visivia button{
@@ -809,7 +822,7 @@ footer{
     }
 
     #seccion-titulo{
-        font-size: 1.5rem;
+        font-size: 1.25em;
         margin-bottom: 30px;
     }
 
@@ -821,7 +834,7 @@ footer{
         padding: 10px;
         font-size: 0.9rem;
         line-height: 1.5rem;
-        width: 400px;
+        width: 90vw;
     }
 
     .quehacemos .grid{
@@ -834,16 +847,26 @@ footer{
         margin-bottom: 40px;
         font-size: 0.9rem;
         line-height: 1.5rem;
-        width: 400px;
+        width: 90vw;
     }
 
     .equipo .grid{
-        gap: 20px;
+        gap: 10px;
+    }
+
+    .equipo-miembro{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .equipo-miembro div{
+        width: 150px;
+        height: 150px;
     }
 
     .alianzas .grid{
         grid-template-areas: "item-1" "item-2";
-        width: 400px;
+        width: 90vw;
         gap: 40px;
     }
 
@@ -852,7 +875,7 @@ footer{
     }
 
     .item-descripcion h3{
-        font-size: 1rem;
+        font-size: 0.9rem;
         letter-spacing: 0.15rem;
     }
 
@@ -868,13 +891,12 @@ footer{
 
     .formulario{
         grid-template-areas: "formulario-datos" "formulario-resto";
-        width: 400px;
-        font-size: 1rem;
+        width: 80vw;
+        font-size: 0.8rem;
         gap: 30px;
     }
     
     .formulario-datos{
-        grid-area: formulario-datos;
         gap: 30px;
     }
     
@@ -883,28 +905,36 @@ footer{
     }
 
     #nombre-apellido input{
-        width: 400px;
+        width: 70vw;
     }
 
     #telefono input{
-        width: 400px;
+        width: 70vw;
     }
 
-    #email input{
-        width: 400px;
+    #correo input{
+        width: 70vw;
     }
     
-    #consulta input{
-        width: 400px;
+    #consulta textarea{
+        width: 70vw;
+    }
+
+    #enviar input{
+        width: 70vw;
+    }
+
+    footer{
+        padding: 10px;
     }
     
     .footer-izquierdo{
         justify-content: space-evenly;
-        width: 200px;
+        width: fit-content;
     }
     
     .footer-derecho{
-        width: 200px;
+        width: fit-content;
     }
     
     .footer-derecho ul{
@@ -912,7 +942,7 @@ footer{
     }
     
     .footer-derecho ul a{
-        font-size: 0.65rem;
+        font-size: 0.5rem;
     }
     
     #footer-logo{
@@ -925,10 +955,17 @@ footer{
     }
     
     .copyrights hr{
-        width: 400px;
+        width: 80vw;
     }
 
     .copyrights p{
         font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 1772px){
+    .video-back{
+        width: auto;
+        height: 100%;
     }
 }

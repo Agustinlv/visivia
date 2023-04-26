@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="robots" content="follow">
+    <meta name="description" content="Somos una empresa dedicada a la asesoría estratégica en industrias reguladasNuestra visión holística nos consolida como líderes en planificación estratégica. Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave. Trabajamos la gestión de la reputación personal y corporativa.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Agustin Lavia">
+    <meta name="copyrights" content="Visivia Consultores 2023">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,11 +34,9 @@
     <main>
         <section id="section-1">
             <div class="container-1">
-                <!--
                 <video class="video-back" autoplay loop muted plays-inline>
                     <source src="./img/video-back.mp4" type="video/mp4">
                 </video>
-                -->
                 <div class="visivia">
                     <ul>
                         <li>ASUNTOS PÚBLICOS</li>
@@ -50,7 +52,7 @@
                 <div class="quienessomos">
                     <h2 id="seccion-titulo">QUIÉNES SOMOS</h2>
                     <hr id="linea-horz">
-                    <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas.<br><br>Nuestra visión holística nos consolida como líderes en planificación estratégica.<br><br>Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.<br><br> Trabajamos la gestión de la resputación personal y corporativa.</p>
+                    <p>Somos una empresa dedicada a la asesoría estratégica en industrias reguladas.<br><br>Nuestra visión holística nos consolida como líderes en planificación estratégica.<br><br>Ofrecemos relacionamiento, manejo de crisis e información para la toma de decisiones clave.<br><br> Trabajamos la gestión de la reputación personal y corporativa.</p>
                 </div>
             </div>
         </section>
@@ -178,9 +180,9 @@
                             <a href="https://komchile.cl/" target="_blank">Ir a KOM CHILE</a>
                         </div>
                         <div class="item-descripcion" id="item-2">
-                            <img src="./img/empresa2-logo.png" height="50" alt="empresa 2 logo">
-                            <h3>UNA EMPRESA ESPAÑOLA</h3>
-                            <a href="" target="_blank">Ir a...</a> 
+                            <img src="./img/orza-logo.png" height="50" alt="empresa 2 logo">
+                            <h3>ORZA</h3>
+                            <a href="https://orza.com.co" target="_blank">Ir a ORZA</a> 
                         </div>
                     </div>
                 </div>
@@ -191,31 +193,31 @@
                 <div class="contacto">
                     <h2 id="seccion-titulo">CONTACTO</h2>
                     <hr id="linea-horz">
-                    <form class="formulario" action="">
-                        <div class="formulario-datos">
-                            <div id="nombre-apellido">
-                                <label>Nombre y Apellido</label>
-                                <input type="text" placeholder="">
+                    <div id="formulario-container">
+                        <form class="formulario">
+                            <div class="formulario-datos">
+                                <div id="nombre-apellido">
+                                    <label>Nombre y Apellido</label>
+                                    <input id="name" type="text" name="name" placeholder="Ingrese su nombre completo" required>
+                                </div>
+                                <div id="telefono">
+                                    <label>Teléfono</label>
+                                    <input id="phone" type="text" name="phone" placeholder="Ingrese su número de teléfono" required>
+                                </div>
+                                <div id="correo">
+                                    <label>Correo Electrónico</label>
+                                    <input id="email" type="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                                </div>
                             </div>
-                            <div id="telefono">
-                                <label>Teléfono</label>
-                                <input type="text" placeholder="">
+                            <div class="formulario-resto">
+                                <div id="consulta">
+                                    <label>Consulta</label>
+                                    <textarea id="message" name="message" placeholder="Déjenos su consulta, por favor. Le responderemos a la brevedad." required></textarea>
+                                </div>
+                                <input id="enviar" type="submit" value="ENVIAR">
                             </div>
-                            <div id="email">
-                                <label>Correo Electrónico</label>
-                                <input type="text" placeholder="">
-                            </div>
-                        </div>
-                        <div class="formulario-resto">
-                            <div id="consulta">
-                                <label>Consulta</label>
-                                <input type="text" placeholder="">
-                            </div>
-                            <div id="enviar">
-                                <input type="submit" value="ENVIAR">
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
@@ -249,5 +251,6 @@
         </div>
     </footer>
 </body>
-<script src="js/menu.js"></script>
+<script src="js/index.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 </html>
