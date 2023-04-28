@@ -457,6 +457,7 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .formulario-datos div{
@@ -782,12 +783,12 @@ footer{
         width: 30px;
         border-radius: 2px;
     }
-    
+
     #menu-toggle::before{
         content: "";
         margin-top: -8px;
     }
-    
+
     #menu-toggle::after{
         content: "";
         margin-top: 12px;
@@ -812,7 +813,7 @@ footer{
         line-height: 4rem;
         margin-bottom: 120px;
     }
-    
+
     .visivia button{
         font-size: 0.8rem;
     }
@@ -858,7 +859,7 @@ footer{
         width: 150px;
         height: 150px;
     }
-    
+
     .equipo-miembro div{
         width: 150px;
         height: 150px;
@@ -895,7 +896,7 @@ footer{
         font-size: 0.8rem;
         gap: 30px;
     }
-    
+
     .formulario-datos{
         gap: 30px;
     }
@@ -915,45 +916,45 @@ footer{
     #correo input{
         width: 70vw;
     }
-    
+
     #consulta textarea{
         width: 70vw;
     }
 
-    #enviar input{
+    #enviar{
         width: 70vw;
     }
 
     footer{
         padding: 10px;
     }
-    
+
     .footer-izquierdo{
         justify-content: space-evenly;
         width: fit-content;
     }
-    
+
     .footer-derecho{
         width: fit-content;
     }
-    
+
     .footer-derecho ul{
         gap: 2px;
     }
-    
+
     .footer-derecho ul a{
         font-size: 0.5rem;
     }
-    
+
     #footer-logo{
         width: 120px;
     }
-    
+
     .redes-sociales{
         width: 200px;
         gap: 20px;
     }
-    
+
     .copyrights hr{
         width: 80vw;
     }
